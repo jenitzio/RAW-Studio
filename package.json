@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "RAW Studio photo editor",
   "main": "main.js",
-  "scripts": {
-    "start": "electron ."
-  },
   "devDependencies": {
     "electron": "22.3.27",
     "electron-builder": "24.13.3"
@@ -13,10 +10,7 @@
   "build": {
     "appId": "com.example.rawstudio",
     "productName": "RAW Studio",
-    "files": [
-      "index.html",
-      "main.js"
-    ],
+    "files": ["index.html", "main.js"],
     "artifactName": "RAW-Studio-${version}.${ext}",
     "linux": {
       "target": ["AppImage"],
