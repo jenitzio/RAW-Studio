@@ -4,8 +4,7 @@
   "description": "RAW Studio photo editor",
   "main": "main.js",
   "scripts": {
-    "start": "electron .",
-    "dist": "electron-builder"
+    "start": "electron ."
   },
   "devDependencies": {
     "electron": "22.3.27",
@@ -18,21 +17,13 @@
       "index.html",
       "main.js"
     ],
+    "artifactName": "RAW-Studio-${version}.${ext}",
     "linux": {
-      "target": [
-        "AppImage"
-      ],
+      "target": ["AppImage"],
       "category": "Graphics"
     },
     "win": {
-      "target": [
-        "nsis",
-        "portable"
-      ]
-    },
-    "nsis": {
-      "oneClick": true,
-      "perMachine": false
+      "target": ["portable"]
     }
   }
 }
