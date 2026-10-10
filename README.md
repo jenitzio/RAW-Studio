@@ -1,6 +1,6 @@
-# RAW Studio
+# JenRAW
 
-RAW Studio is a desktop app packaged from this repository's web app. It uses Electron to run `index.html` as a desktop application and GitHub Actions to build downloadable releases.
+JenRAW is a desktop app packaged from this repository's web app. It uses Electron to run `index.html` as a desktop application and GitHub Actions to build downloadable releases.
 
 > **Note:** To run on Linux, run this command, and make sure the file is an executable program
   '/home/YOUR_USER_NAME/RAW-Studio-1.0.0.AppImage' --no-sandbox
