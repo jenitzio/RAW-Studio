@@ -466,19 +466,19 @@
         display: none;
       }
       :root {
-        --bg: oklch(0.205 0.003 265);
-        --panel: oklch(0.255 0.003 265);
-        --panel2: oklch(0.225 0.003 265);
-        --head: oklch(0.285 0.003 265);
-        --border: oklch(0.335 0.003 265);
-        --text: oklch(0.88 0.002 265);
-        --muted: oklch(0.64 0.003 265);
-        --accent: oklch(0.59 0.22 25);
-        --input: oklch(0.19 0.003 265);
-        --library: oklch(0.235 0.003 265);
-        --overlay: oklch(0.13 0 0 / 0.7);
-        --on-accent: oklch(1 0 0);
-        --shadow: 0 12px 40px oklch(0 0 0 / 0.3);
+        --bg: #161719;
+        --panel: #222324;
+        --panel2: #1b1c1d;
+        --head: #292a2c;
+        --border: #363738;
+        --text: #d7d7d9;
+        --muted: #8b8c8e;
+        --accent: #e32631;
+        --input: #131415;
+        --library: #1d1e1f;
+        --overlay: rgba(7,7,7,0.7);
+        --on-accent: #ffffff;
+        --shadow: 0 12px 40px rgba(0,0,0,0.3);
         --side: 330px;
         --lib: 210px;
         --strip: 114px;
@@ -488,37 +488,37 @@
         --canvas-bg: var(--bg);
       }
       body.t-light {
-        --bg: oklch(0.88 0 0);
-        --panel: oklch(0.97 0 0);
-        --panel2: oklch(0.93 0 0);
-        --head: oklch(0.91 0 0);
-        --border: oklch(0.8 0 0);
-        --text: oklch(0.23 0 0);
-        --muted: oklch(0.48 0 0);
-        --input: oklch(1 0 0);
-        --library: oklch(0.94 0 0);
+        --bg: #d7d7d7;
+        --panel: #f5f5f5;
+        --panel2: #e8e8e8;
+        --head: #e1e1e1;
+        --border: #bebebe;
+        --text: #1d1d1d;
+        --muted: #5d5d5d;
+        --input: #ffffff;
+        --library: #ebebeb;
       }
       body.t-midnight {
-        --bg: oklch(0.16 0.02 250);
-        --panel: oklch(0.23 0.02 250);
-        --panel2: oklch(0.2 0.02 250);
-        --head: oklch(0.27 0.02 250);
-        --border: oklch(0.33 0.02 250);
-        --text: oklch(0.9 0.01 250);
-        --muted: oklch(0.65 0.02 250);
-        --input: oklch(0.15 0.02 250);
-        --library: oklch(0.2 0.02 250);
+        --bg: #070e16;
+        --panel: #161e26;
+        --panel2: #0f171f;
+        --head: #1f2730;
+        --border: #2e363f;
+        --text: #d9dfe5;
+        --muted: #86909b;
+        --input: #050c13;
+        --library: #0f171f;
       }
       body.t-contrast {
-        --bg: oklch(0 0 0);
-        --panel: oklch(0.15 0 0);
-        --panel2: oklch(0 0 0);
-        --head: oklch(0.2 0 0);
-        --border: oklch(0.8 0 0);
-        --text: oklch(1 0 0);
-        --muted: oklch(0.85 0 0);
-        --input: oklch(0 0 0);
-        --library: oklch(0.1 0 0);
+        --bg: #000000;
+        --panel: #0b0b0b;
+        --panel2: #000000;
+        --head: #161616;
+        --border: #bebebe;
+        --text: #ffffff;
+        --muted: #cecece;
+        --input: #000000;
+        --library: #030303;
       }
       html,
       body {
@@ -1480,9 +1480,9 @@
         <span class="session-count" id="sessionCount">No photos</span>
       </nav>
       <div class="toolbar">
-        <button class="tb" id="bOpen" title="Open files (O)">📂 Open files</button>
+        <button class="tb" id="bOpen" title="Open files (O)">▤ Open files</button>
         <button class="tb" id="bFolder" title="Open a folder of images / RAW files">
-          🗀 Open folder
+          ▭ Open folder
         </button>
         <span class="sep"></span>
         <button
@@ -1499,11 +1499,11 @@
         <span class="sep"></span>
         <button class="tb" id="bRotL" title="Rotate left ([)">⟲</button>
         <button class="tb" id="bRotR" title="Rotate right (])">⟳</button>
-        <button class="tb" id="bCrop" title="Crop tool (C)">⛶ Crop</button>
+        <button class="tb" id="bCrop" title="Crop tool (C)">◰ Crop</button>
         <button class="tb" id="bCmp" title="Before / after (B)">◧ Before/After</button>
         <button class="tb" id="bZoom" title="Fit / 100% (F)">Fit</button>
         <span class="sep"></span>
-        <button class="tb" id="bAuto" title="Auto tone + white balance">✨ Auto</button>
+        <button class="tb" id="bAuto" title="Auto tone + white balance">✦ Auto</button>
         <button class="tb" id="bCopy" title="Copy edit settings">Copy</button>
         <button class="tb" id="bPaste" title="Paste edit settings to selected">Paste</button>
         <button class="tb" id="bSync" title="Apply active image's edits to all selected images">
@@ -3070,7 +3070,7 @@
       let aspect = "Free";
       {
         let p = sec("crop", "Crop");
-        btn(p, "⛶ Crop tool (C)", () => toggleCrop());
+        btn(p, "◰ Crop tool (C)", () => toggleCrop());
         btn(p, "Reset crop", () => {
           setVal("crop", { x: 0, y: 0, w: 1, h: 1 });
           commit();
@@ -3421,8 +3421,8 @@
           applyPartial(g);
           toast("Preset applied");
         });
-        btn(p, "Save current as preset", () => {
-          const n = prompt("Preset name:");
+        btn(p, "Save current as preset", async () => {
+          const n = await askText("Preset name:");
           if (!n) return;
           userPresets[n] = flatEdits(active.s);
           safeWrite("rs_presets", userPresets);
@@ -5098,5 +5098,9 @@
       schedule();
       initWorkspace();
     </script>
-  </body>
+  <script>
+/* Electron-safe replacement for window.prompt (unsupported in Electron) */
+function askText(label){return new Promise(function(res){var o=document.createElement("div");o.style.cssText="position:fixed;inset:0;background:rgba(0,0,0,.55);display:flex;align-items:center;justify-content:center;z-index:99999";o.innerHTML='<div style="background:#2a2a2e;color:#eee;padding:16px;border:1px solid #444;border-radius:4px;min-width:280px;font:13px sans-serif"><div style="margin-bottom:8px"></div><input style="width:100%;padding:5px;background:#1c1c1f;color:#eee;border:1px solid #555;user-select:text"><div style="margin-top:10px;text-align:right"><button>Cancel</button> <button>OK</button></div></div>';o.querySelector("div div").textContent=label;var i=o.querySelector("input"),b=o.querySelectorAll("button");function done(v){o.remove();res(v)}b[0].onclick=function(){done(null)};b[1].onclick=function(){done(i.value.trim()||null)};i.onkeydown=function(e){if(e.key==="Enter")done(i.value.trim()||null);if(e.key==="Escape")done(null)};document.body.appendChild(o);i.focus()})}
+</script>
+</body>
 </html>
