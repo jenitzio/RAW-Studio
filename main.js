@@ -1,8 +1,8 @@
 const { app, BrowserWindow } = require('electron');
 const path = require('node:path');
 
-function createWindow() {
-  const win = new BrowserWindow({
+app.whenReady().then(() => {
+  const window = new BrowserWindow({
     width: 1400,
     height: 900,
     backgroundColor: '#2b2b2b',
@@ -13,11 +13,7 @@ function createWindow() {
     }
   });
 
-  win.loadFile(path.join(__dirname, 'index.html'));
-}
-
-app.whenReady().then(createWindow);
-
-app.on('window-all-closed', () => {
-  app.quit();
+  window.loadFile(path.join(__dirname, 'index.html'));
 });
+
+app.on('window-all-closed', () => app.quit());
